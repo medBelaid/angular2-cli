@@ -15,7 +15,42 @@ var MyMapsProjectComponent = (function () {
         this.title = 'My first angular2-google-maps project';
         this.lat = 51.678418;
         this.lng = 7.809007;
+        // google maps zoom level
+        this.zoom = 8;
+        this.markers = [
+            {
+                lat: 51.673858,
+                lng: 7.815982,
+                label: 'A',
+                draggable: true
+            },
+            {
+                lat: 51.373858,
+                lng: 7.215982,
+                label: 'B',
+                draggable: false
+            },
+            {
+                lat: 51.723858,
+                lng: 7.895982,
+                label: 'C',
+                draggable: true
+            }
+        ];
     }
+    MyMapsProjectComponent.prototype.clickedMarker = function (label, index) {
+        console.log("clicked the marker: " + (label || index));
+    };
+    MyMapsProjectComponent.prototype.markerDragEnd = function (m, $event) {
+        console.log('dragEnd', m, $event);
+    };
+    MyMapsProjectComponent.prototype.mapClicked = function ($event) {
+        this.markers.push({
+            lat: $event.coords.lat,
+            lng: $event.coords.lng,
+            draggable: true
+        });
+    };
     MyMapsProjectComponent.prototype.ngOnInit = function () {
     };
     MyMapsProjectComponent = __decorate([

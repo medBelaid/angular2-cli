@@ -9,7 +9,8 @@
 **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-  'angular2-google-maps': 'vendor/angular2-google-maps'
+  'angular2-google-maps': 'vendor/angular2-google-maps',
+  'angular2-in-memory-web-api': 'https://npmcdn.com/angular2-in-memory-web-api', // get latest
 };
 
 /** User packages configuration. */

@@ -7,7 +7,8 @@
 **********************************************************************************************/
 /** Map relative paths to URLs. */
 var map = {
-    'angular2-google-maps': 'vendor/angular2-google-maps'
+    'angular2-google-maps': 'vendor/angular2-google-maps',
+    'angular2-in-memory-web-api': 'https://npmcdn.com/angular2-in-memory-web-api',
 };
 /** User packages configuration. */
 var packages = {
